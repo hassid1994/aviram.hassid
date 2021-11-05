@@ -1,0 +1,31 @@
+* {
+    font-size: 20px;
+}
+
+body {
+    background-color: darkgoldenrod;
+    backface-visibility: visible;
+}
+.title {
+    color: lawngreen;
+}
+
+#submit_color {
+    color: red;
+}
+
+ input{
+    color: rgb(150, 114, 250);
+}
+
+#male_color{
+color: blue;
+}
+
+#female_color {
+    color: pink;
+
+}
+#other {
+    color: black;
+}
