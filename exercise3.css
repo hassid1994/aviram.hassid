@@ -5,6 +5,7 @@
 body {
     background-color: darkgoldenrod;
     backface-visibility: visible;
+    font-family: sans-serif;
 }
 .title {
     color: lawngreen;
@@ -16,16 +17,28 @@ body {
 
  input{
     color: rgb(150, 114, 250);
+    padding: 10px;
+    margin: 10px;
+  font-family: sans-serif;
 }
 
 #male_color{
 color: blue;
+padding: 10px;
+margin: 10px;
 }
 
 #female_color {
     color: pink;
+    padding: 10px;
+    margin: 10px;
 
 }
 #other {
     color: black;
+    padding: 10px;
+    margin: 10px;
+}
+h1.title{
+    background-color: grey;
 }

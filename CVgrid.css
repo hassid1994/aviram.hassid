@@ -1,0 +1,49 @@
+body{
+    background-color: blue;
+}
+
+
+#GridContainer{
+display: grid;
+grid-template-areas: 
+'header header header'
+'left main main'
+'left main main'
+;
+}
+
+.item1{
+grid-area: header;
+color: crimson;
+}
+.item2{
+    grid-area: left;
+    color: burlywood;
+}
+
+.item3{
+    grid-area: main;
+    color: black;
+
+}
+   
+
+div div {
+height: 100px;
+width: 200px;
+padding: 20px;
+margin: 20px;
+background-color: white;
+}
+div {
+    border: 2px solid black;
+}
+
+@media all and (max-width: 700px) {
+
+body {
+   background-color: red;
+}
+   
+        
+}
