@@ -1,7 +1,11 @@
 body {
     margin: 0;
-    background-color: silver;
+    background-color:white;
+
+    
 }
+
+
 
 .container {
 width: 100vw;
@@ -21,24 +25,43 @@ gap: 10px;
 padding: 10;
 box-sizing: border-box;
 
+
+
 }
 
+@keyframes myanimation {
+    0% {background-color: white;}
+    25%{background-color: yellow;}
+    50%{background-color: palevioletred;}
+    75%{background-color: blueviolet;}
+    100%{background-color: white;}
+}
+   
 
 .container div {
     padding: 10px;
     border: 1px solid #000;
-    ;
+    background-color:white;
+
+    position: relative;
+    animation-name: myanimation;
+    animation-duration: 10s;
+    
+ 
 }
 
 .header {
     grid-column-start: 1;
     grid-column-end: 4;
+   
+   
 }
 
 .content-large {
    
     grid-row-start: 2;
     grid-row-end: span 2;
+    
 }
 
 .footer{
