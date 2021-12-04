@@ -1,0 +1,200 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+
+ 
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Name Name Name Name"
+    "Skills Body Body Body"
+    "Skills Body Body Body";
+}
+
+.Name { 
+    background-color: white;
+  grid-area: Name; 
+  text-align: center;
+  line-height: 0px;
+}
+
+.Skills { 
+  background-color: white
+  grid-area: Skills; 
+  border-right: solid black;
+  
+}
+
+.Skills h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.Skills ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.Body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Education Education Education"
+    "Work Work Work";
+  grid-area: Body;
+ background-color: white;
+
+}
+
+.Education { 
+  grid-area: Education; 
+  padding-left: 20px;
+  border-bottom: solid black;
+}
+
+.Education h2 {
+  text-decoration: underline;
+}
+
+.Work { 
+    
+  grid-area: Work; 
+  padding-left: 20px;
+}
+
+.Work h2 {
+  text-decoration: underline;
+}
+
+.Work ul li {
+  padding: 1px;
+}
+
+#EasyWay {
+  color: black;
+}
+@media screen and (max-width: 600px) {
+  body {
+  background-color: white;
+}}
+#linkedin{
+  float:right;
+  margin-right: 20px;
+padding-bottom: 10px;
+
+font-family: Verdana, sans-serif;
+color: blue;
+}
+#Email{
+  float:right;
+  margin-right: 20px;
+padding-bottom: 10px;
+font-size: 16px;
+font-family: Verdana, sans-serif;
+color: blue;
+}
+
+
+input{
+  
+  color: rgb(16, 16, 17);
+}
+.Contact { 
+  
+  background-color: grey;
+  border-right: solid black;}
+  
+  #Notice{
+    color: rgb(0, 162, 255);
+    font-size: 22px;
+  }
+
+  section {
+    height: 100vh;
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000010;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.199);
+    margin-top: 5px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  button[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+    border-radius: 8px;
+    font-family: "Montserrat";
+    color: rgb(27, 166, 247);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease background-color;
+  }
+  button[type="submit"]:hover {
+    background-color: rgb(214, 226, 236);
+  }
+  #status {
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+  #status.success {
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+  }
+  #status.error {
+    background-color: rgb(250, 129, 92);
+    color: white;
+    animation: status 4s ease forwards;
+  }
+  @keyframes status {
+    0% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
