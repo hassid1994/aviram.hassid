@@ -1,2 +1,0 @@
-# aviram.hassid
-Aviram Hassid 

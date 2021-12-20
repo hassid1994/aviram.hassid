@@ -1,49 +1,34 @@
 
-<html lang="en">
-<head> 
-    <title>Aviram Hassid CV</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cv.css">
-    
-    <title>My CV</title>
-</head>
+<link rel="stylesheet" href="{{ url_for('static' , filename='css1/contact.css')}}">
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
 
-<body>
-    <section>
+
+<section>
         <div class="container">
-      
+
             <div class="form-group">
               <label for="firstName"> First Name</label>
               <input type="text" id="firstName" name="firstName">
             </div>
-      
+
             <div class="form-group">
               <label for="latsName">Last Name</label>
               <input type="text" id="lastName" name="lastName">
             </div>
-      
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email">
-            </div>
-      
+
+
+
             <div class="form-group">
               <label for="massage">Massage</label>
               <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
             </div>
-      
-            <button type="submit">Submit</button>
+
+            <button type="">Submit</button>
           </form>
         </div>
         <div id="status"></div>
       </section>
+{% endblock %}
 
-      <script src="cv.js"></script>
-
-
-
-</body>
-
-</html>

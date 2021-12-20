@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+    <h2 align="center">My Hobbies:</h2>
+
+    {% for i in hobbies %}
+  <ul class = "outside">
+        <li > {{ i | upper }}
+</ul>
+    {% endfor %}
+
+   <h3 align="center"> Number of Hobbies: {{ hobbies | length }} <br> </h3>
+
+
+
+    {% if hobbies | length > 3 %}
+        Nice Hobbies! Keep Going!
+
+    {% else %}
+        you need to specify at least 6 Hobbies!
+    {% endif %}
+
+
+
+{% endblock %}
+
