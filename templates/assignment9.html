@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="{{ url_for('static' , filename='css1/create_account.css')}}">
+
+{% extends 'base.html' %}
+{% block title %}Sign in  Page{% endblock %}
+{% block content %}
+
+
+    <div class="container">
+	<div class="header">
+	</div>
+        <form  class="form-inline my-2 my-lg-0" action="/assignment9", method="GET" >
+      <input class="form-control mr-sm-2" name="email" type="search" placeholder="Enter User Email" aria-label="Search"><br>
+      <button  class="btn btn-outline-success my-2 my-sm-0" type="submit">Search for User</button>
+
+    </form>
+        {% if u_name %}
+            <h2> Hi there user :</h2>
+            <p>  User Name : {{ u_name }} <br>
+                 Email :     {{ u_email }}
+            </p>
+        {% endif %}
+
+     {% if user_list %}
+            <h2>List of users:</h2>
+                {%  for key, value in user_list.items() %}
+                <li>
+                    {{ key }}: <b>{{ value.get('name') }}</b> ({{ value.get('email') }})
+                </li>
+                {% endfor %}
+            {% endif %}
+<br><br><br>
+            {% if session.username %}
+                <h3>Welcome {{ session.username }}!</h3>
+                <form action="/signout">
+                <input type="submit" value="Sign Out">
+                 </form>
+             {% else %}
+
+          <form  class="form-inline my-2 my-lg-0" action="/assignment9", method="POST" >
+      <input class="form-control mr-sm-2" name="username" type="search" placeholder="Enter User Name" aria-label="Search"><br>
+        <input  class="form-control mr-sm-2" name="email_re" type="search" placeholder="Enter email" aria-label="Search">
+            <input  class="form-control mr-sm-2" name="email_re" type="password" placeholder="Enter password" aria-label="Search">
+
+      <button  class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In </button> <br>
+
+
+	</form>
+       {% endif %}
+
+</div>
+
+
+
+{% endblock %}
+
