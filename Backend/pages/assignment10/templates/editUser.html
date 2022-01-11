@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Config Users{% endblock %}
+{% block content %}
+
+<html>
+	<head>
+		<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	</head>
+	<body>
+	<h1>Update User Details</h1>
+		<form action='' method='post'>
+			<label>Name:</label>
+			<input type="text" name="name" value="{{datas.name}}"   required>
+			<label>Age:</label>
+			<input type="text" name="age" value="{{datas.Age}}"  required>
+			<label>City:</label>
+			<input type="text" name="city" value="{{datas.City}}"  required>
+			<input type='submit' value='Update Details'>
+		</form>
+	</body>
+</html>
+
+
+
+
+{% endblock %}
