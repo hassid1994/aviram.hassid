@@ -30,10 +30,10 @@ def assignemnt10():
 def addUsers():
     if request.method=='POST':
         name=request.form['name']
-        City=request.form['city']
         Age=request.form['Age']
+        City=request.form['City']
         con=mysql.connection.cursor()
-        sql="insert into users(name ,Age,City) value (%s,%s,%s)"
+        sql="insert into users(name,Age,City) value (%s,%s,%s)"
         con.execute(sql,[name,Age,City])
         mysql.connection.commit()
         con.close()
@@ -47,11 +47,12 @@ def addUsers():
 def editUser(id):
     con = mysql.connection.cursor()
     if request.method == 'POST':
-        name = request.form['name']
-        city = request.form['City']
-        age= request.form['Age']
-        sql = "update users set name =%s,City=%s,Age=%s where ID=%s"
-        con.execute(sql, [name, city, age, id])
+        name == request.form['name']
+        Age  == request.form['Age']
+        City  == request.form['Age']
+
+        sql = "update users set name=%s,Age=%s,City=%s where ID=%s"
+        con.execute(sql[ID,FirstName,LastName,Age])
         mysql.connection.commit()
         con.close()
         flash('User Detail Updated')

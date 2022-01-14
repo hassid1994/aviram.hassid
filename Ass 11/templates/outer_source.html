@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% block title %}API{% endblock %}
+{% block content %}
+
+
+    <div align="center">
+    <h2 align="center"> Frontend Api:</h2>
+     <form  action =outer_source" method="GET">
+     <input align="center" name = "user_id_front">
+     <input align="center"  type ="submit" value="Get ID">
+     </form>
+
+    {% if user_id_front %}
+    <script src = "../static/JS/fetch.js"> </script>
+    <h2> User ID Details : <button onclick = "getUsers({{ user_id_front }})"> Display </button></h2>
+
+    <main>
+
+    </main>
+</div>
+   {% endif %}
+
+<br><br><br><br>
+    <h2 align="center"> Backend Api:</h2>
+    <form action = "outer_source" method="GET">
+    <input name = "id">
+    <input type = "submit" value = "Get ID">
+    </form>
+
+    {% if users %}
+        {% for user in users %}
+            ID : {{ user.data.id }}
+            Email: {{ user.data.email }}
+            First Name: {{ user.data.first_name}}
+            Last Name: {{ user.data.Last_name }}
+             <img src = "{{ user.data.avatar}}" alt = "pic">
+        {% endfor %}
+    {% endif %}
+
+
+{% endblock %}
+
