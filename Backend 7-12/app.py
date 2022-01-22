@@ -3,8 +3,10 @@ from flask import request
 from flask import session
 import mysql.connector
 import requests
+from flask import jsonify
 import random
-from interact_with_DB import *
+
+#from interact_with_DB import *
 #APP SET UP
 app = Flask(__name__)
 app.secret_key = '123'
@@ -84,6 +86,24 @@ def req_front_back():
         return render_template('outer_source.html', user_id_front = user_id_front)
 
     return render_template('outer_source.html')
+@app.route('/assignment12/restapi_users/',defaults= {'name': 'John Reed'})
+@app.route('/assignment12/restapi_users/<int:user_id>')
+def rest_api(user_id):
+    query = 'select * from users where id =%s;' % user_id
+    users = interact_db(query = query , query_type='fetch')
+    if len(users) == 0:
+         users_dict = {'status: failed',
+                  'message : there is no user with this id'}
+        return jsonify(users_dict)
+    else:
+         corr_users_dict = {
+             f'id': users[0].id,
+            'name': users[1].name,
+            'Age' : users[2].Age,
+            'City': users[3].City
+                                  }
+              return jsonify(corr_users_dict)
+
 
 
 
