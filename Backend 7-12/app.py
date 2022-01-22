@@ -86,6 +86,9 @@ def req_front_back():
         return render_template('outer_source.html', user_id_front = user_id_front)
 
     return render_template('outer_source.html')
+
+
+
 @app.route('/assignment12/restapi_users/',defaults= {'name': 'John Reed'})
 @app.route('/assignment12/restapi_users/<int:user_id>')
 def rest_api(user_id):
@@ -102,7 +105,7 @@ def rest_api(user_id):
             'Age' : users[2].Age,
             'City': users[3].City
                                   }
-              return jsonify(corr_users_dict)
+            return jsonify(corr_users_dict)
 
 
 
